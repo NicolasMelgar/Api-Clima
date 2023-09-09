@@ -14,6 +14,9 @@ let boton = document.getElementById("boton__clima").addEventListener("click", fu
             let minima = ((response.main.temp_min - 273.15)-6).toFixed(1) + " °C";
             let humedad = (response.main.humidity + " %");
             let pais = (response.sys.country);
+            let icono = (response.weather[0].icon);
+            // let iconoB = document.createElement("img");
+            let ruta=`https://openweathermap.org/img/wn/${icono}@2x.png`;
             //Creo todos mis datos
             temperatura.innerHTML = `
                     <h2> Ciudad </h2>
@@ -24,6 +27,7 @@ let boton = document.getElementById("boton__clima").addEventListener("click", fu
                     <p> Mínima: <b>${minima}</b> </p>
                     <p> Sensación termica: <b> ${principal} </b> </p>
                     <p> Humedad: <b> ${humedad} </b> </p>
+                    <img src=${ruta} alt="Icono de clima"></img>
                 `;
         });
     //Dejo vacío el input
