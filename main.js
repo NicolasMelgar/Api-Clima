@@ -1,5 +1,6 @@
 let urlApi = 'api.openweathermap.org/data/2.5/weather?q=';
-let APIkey = 'CLIMA_API_KEY';
+//let APIkey = 'CLIMA_API_KEY';
+let APIkey = '&APPID=c9b8692f0a1ea7c3e24c0640abd66eea';
 //Configuro el botón de ver el clima 
 let boton = document.getElementById("boton__clima").addEventListener("click", function () {
     let ciudadConsulta = document.getElementById("ciudad").value;//Ingreso el dato de la ciudad
